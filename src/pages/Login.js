@@ -27,10 +27,11 @@ class Login extends React.Component {
   validButton() {
     const { email, senha } = this.state;
     const SIX = 6;
-    const regex = /[\w.ã]+@\w+\.\w{2,8}(\.\w{0,2})?/g;
+    const LIM = 35;
+    const regex = /\w+@\w+\.\w{2,8}(\.\w{0,2})?/g;
     const validEmail = regex.test(email);
 
-    if (senha.length >= SIX && validEmail) {
+    if (senha.length >= SIX && validEmail && email.length <= LIM) {
       this.setState({ isDisabled: false });
     } else {
       this.setState({ isDisabled: true });
