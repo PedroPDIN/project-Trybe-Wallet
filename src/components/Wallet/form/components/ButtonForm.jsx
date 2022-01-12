@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getCoinsApi, getRequireApi } from '../../../../actions';
 
 class ButtonForm extends Component {
   constructor(props) {
@@ -12,12 +14,19 @@ class ButtonForm extends Component {
     };
   }
 
-  onClick() {
-    const { states, dispatch } = this.props;
+  componentDidMount() {
+    const { onCurrencies } = this.props;
+    onCurrencies();
+  }
+
+  async onClick() {
+    const { states, dispatch, onRates, reset } = this.props;
     const { id } = this.state;
     this.setState({ id: id + 1 });
-    const result = { ...states, id };
+    const exchangeRates = await onRates();
+    const result = { ...states, id, exchangeRates };
     dispatch(result);
+    reset();
   }
 
   render() {
@@ -43,6 +52,14 @@ ButtonForm.propTypes = {
     tag: PropTypes.string,
   }).isRequired,
   dispatch: PropTypes.func.isRequired,
+  onCurrencies: PropTypes.func.isRequired,
+  onRates: PropTypes.func.isRequired,
+  reset: PropTypes.func.isRequired,
 };
 
-export default ButtonForm;
+const mapDispatchToProps = (dispatch) => ({
+  onCurrencies: () => dispatch(getCoinsApi()),
+  onRates: () => dispatch(getRequireApi()),
+});
+
+export default connect(null, mapDispatchToProps)(ButtonForm);

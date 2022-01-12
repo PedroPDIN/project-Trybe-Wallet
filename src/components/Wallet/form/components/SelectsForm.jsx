@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class SelectForm extends Component {
   render() {
-    const { currency, method, tag, onChange } = this.props;
+    const { currency, method, tag, onChange, coins } = this.props;
     return (
       <div>
         <label htmlFor="currency's">
           Moeda:
           <select
+            id="currency's"
             name="currency"
             value={ currency }
             onChange={ onChange }
             data-testid="currency-input"
           >
-            <option value="test">test</option>
-            <option value="test2">test2</option>
+            {coins.map((value, index) => (
+              <option
+                key={ index }
+                value={ value }
+                data-testid={ value }
+              >
+                {value}
+              </option>
+            ))}
           </select>
         </label>
         <label htmlFor="methods">
           Pagamentos:
           <select
+            id="methods"
             name="method"
             value={ method }
             onChange={ onChange }
@@ -34,6 +44,7 @@ class SelectForm extends Component {
         <label htmlFor="tags">
           Tags:
           <select
+            id="tags"
             name="tag"
             value={ tag }
             onChange={ onChange }
@@ -51,11 +62,16 @@ class SelectForm extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  coins: state.wallet.currencies,
+});
+
 SelectForm.propTypes = {
   currency: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  coins: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default SelectForm;
+export default connect(mapStateToProps)(SelectForm);

@@ -11,6 +11,7 @@ class Form extends Component {
     super();
 
     this.onInputChange = this.onInputChange.bind(this);
+    this.onResetChange = this.onResetChange.bind(this);
 
     this.state = {
       value: '',
@@ -24,6 +25,16 @@ class Form extends Component {
   onInputChange({ target }) {
     const { name } = target;
     this.setState({ [name]: target.value });
+  }
+
+  onResetChange() {
+    this.setState({
+      value: '',
+      description: '',
+      currency: '',
+      method: '',
+      tag: '',
+    });
   }
 
   render() {
@@ -42,7 +53,11 @@ class Form extends Component {
           tag={ tag }
           onChange={ this.onInputChange }
         />
-        <ButtonForm states={ this.state } dispatch={ dispatchInfo } />
+        <ButtonForm
+          states={ this.state }
+          dispatch={ dispatchInfo }
+          reset={ this.onResetChange }
+        />
       </form>
     );
   }
