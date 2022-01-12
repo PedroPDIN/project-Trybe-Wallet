@@ -25,6 +25,7 @@ class ButtonForm extends Component {
     this.setState({ id: id + 1 });
     const exchangeRates = await onRates();
     const result = { ...states, id, exchangeRates };
+    // linha acima feito com auxilio de MAteus Turola turma 16 for(ever).
     dispatch(result);
     reset();
   }
@@ -63,3 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(null, mapDispatchToProps)(ButtonForm);
+
