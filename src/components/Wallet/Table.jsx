@@ -28,17 +28,18 @@ class Table extends Component {
             <th>Editar/Excluir</th>
           </tr>
           {data.map((element, index) => (
-            <tr key={ index }>
+            <tr key={index}>
               <td>{element.description}</td>
               <td>{element.tag}</td>
               <td>{element.method}</td>
               <td>{element.value}</td>
-              <td>{element.currency}</td>
               <td>{element.exchangeRates[element.currency].name.split('/')[0]}</td>
+              <td>{Number(element.exchangeRates[element.currency].ask).toFixed(2)}</td>
               <td>
-                {`R$ ${Number(element.exchangeRates[element.currency].ask).toFixed(2)}`}
+                {Number(element.exchangeRates[element.currency].ask * element.value)
+                  .toFixed(2)}
               </td>
-              <td>{element.exchangeRates[element.currency].name.split('/')[1]}</td>
+              <td>Real</td>
             </tr>
           ))}
         </table>
