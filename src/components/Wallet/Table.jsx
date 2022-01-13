@@ -35,7 +35,9 @@ class Table extends Component {
               <td>{element.value}</td>
               <td>{element.currency}</td>
               <td>{element.exchangeRates[element.currency].name.split('/')[0]}</td>
-              <td>{`R$ ${Number(element.exchangeRates[element.currency].ask).toFixed(2)}`}</td>
+              <td>
+                {`R$ ${Number(element.exchangeRates[element.currency].ask).toFixed(2)}`}
+              </td>
               <td>{element.exchangeRates[element.currency].name.split('/')[1]}</td>
             </tr>
           ))}
