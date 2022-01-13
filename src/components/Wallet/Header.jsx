@@ -17,9 +17,9 @@ class Header extends React.Component {
     const { userEmail, infoForm } = this.props;
     return (
       <header>
-        <span data-testid="email-field">{userEmail}</span>
+        <span data-testid="email-field">{`Email: ${userEmail}`}</span>
         {' '}
-        <span data-testid="total-field">{addTotal(infoForm)}</span>
+        <span data-testid="total-field">{`Despesa Total: R$${addTotal(infoForm)}`}</span>
         {' '}
         <span data-testid="header-currency-field">{exchangeRate}</span>
       </header>
