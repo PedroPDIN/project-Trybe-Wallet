@@ -4,8 +4,7 @@ import getApi from '../service/fetchApi';
 export const ADD_USER = 'ADD_USER';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
 export const ADD_CURRENCIES = 'ADD_CURRENCIES';
-/* export const REQUIRE_SUCCESS = 'REQUIRE_SUCCESS'; */
-/* export const REQUIRE_ERROR = 'REQUIRE_ERROR'; */
+export const REMOVE_EXPENSES = 'REMOVE_EXPENSES';
 
 export const getUser = (payload) => ({
   type: 'ADD_USER',
@@ -25,6 +24,11 @@ export const getCurrencies = (payload) => ({
 export const getRequire = (rates) => ({
   type: 'REQUIRE_SUCCESS',
   rates,
+});
+
+export const removeExpenses = (id) => ({
+  type: 'REMOVE_EXPENSES',
+  id,
 });
 
 // ======================= thunks =============================
