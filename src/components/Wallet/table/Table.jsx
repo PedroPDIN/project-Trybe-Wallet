@@ -23,7 +23,7 @@ class Table extends Component {
             </tr>
 
             {data.map((element) => (
-              <tr key={element.id}>
+              <tr key={ element.id }>
                 <td>{element.description}</td>
                 <td>{element.tag}</td>
                 <td>{element.method}</td>
@@ -35,7 +35,7 @@ class Table extends Component {
                     .toFixed(2)}
                 </td>
                 <td>Real</td>
-                <td><ButtonExcluir id={element.id} data-testid="delete-btn" /></td>
+                <td><ButtonExcluir id={ element.id } data-testid="delete-btn" /></td>
               </tr>
             ))}
 
