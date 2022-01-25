@@ -263,7 +263,8 @@ describe('8 - Crie um botão para deletar uma despesa da tabela contendo as segu
 
   test('O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid="delete-btn"`', () => {
     renderWithRouterAndStore(<Wallet />, '/carteira', initial);
-    const lastButton = document.getElementsByTagName('tr')[1].lastChild.lastChild;
+   /*  const lastButton = document.getElementsByTagName('tr')[1].lastChild.lastChild; */
+   const lastButton = document.getElementsByTagName('tr')[1].lastChild.lastChild;
     expect(lastButton).toBeInTheDocument();
     expect(lastButton.dataset.testid).toBe(BTN_DELETE_TEST_ID);    
   });

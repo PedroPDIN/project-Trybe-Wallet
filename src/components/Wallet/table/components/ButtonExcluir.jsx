@@ -11,15 +11,13 @@ class ButtonExcluir extends Component {
   render() {
     const { dispatchRemove, id } = this.props;
     return (
-      <div>
-        <button
-          type="button"
-          data-testid="delete-btn"
-          onClick={ () => dispatchRemove(id) }
-        >
-          Excluir
-        </button>
-      </div>
+      <button
+        type="button"
+        data-testid="delete-btn"
+        onClick={() => dispatchRemove(id)}
+      >
+        Excluir
+      </button>
     );
   }
 }
