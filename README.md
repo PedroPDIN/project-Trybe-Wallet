@@ -1,7 +1,8 @@
-# Seja bem-vindo ao repositorio do projeto **Trybe Wallet**.
+# Seja bem-vindo ao repositorio do projeto **Trybe Wallet**, a sua carteira digital.
 
-O resultado dessa aplicação tem como finalidade, a criação de uma carteira digital para computar os gastos das cotações das moedas de vários países. Nesse aplicação o usuário poderá selecionar um ou mais moedas especifica e armazena-la da carteira em forma de despesa, além de;
+O resultado dessa aplicação tem como finalidade, a criação de uma carteira digital para comprar e computar os gastos das cotações das moedas de vários países. Nesse aplicação o usuário poderá selecionar um ou mais moedas especifica e armazena-la da carteira em forma de despesa, além de;
 
+* comprar moedas.
 * converter tudo para uma única moeda.
 * Verificar taxas.
 * Verificar o valor total do conversão da moeda seleciona.
@@ -11,8 +12,6 @@ Com isso, o usuário também poderá;
 
 * Criar outra despesa. Com tudo, possuindo uma lista de despesas em sua carteira.
 * E ter a possibilidade de deletar um valor de uma lista selecionada. 
-
-
 
 ## Tecnologias e Linguagens utilizadas;
 
@@ -53,16 +52,19 @@ O retorna desse endpoint terá esta estrutura:
 ## Instruções para instalar o projeto no seu computador.
 
 ### 1. Clonar o repositório:
-    * Na página no gihub click no botão verde titulado como `code`.
-    * Selecione a opção `SSH`.
-    * Click no ícone de copiar.
+
+* Na página no gihub click no botão verde titulado como `codes`.
+* Selecione a opção 'SSH'.
+ * Click no ícone de copiar.
 
 ### 2. Instalando no seu computador:
-    * Depois de ter feito a passo 1 vá no seu terminal.
 
-    * No local aonde você pretende instalar rode o comando `git clone` e logo após o endereço `SSH` que você copiou.
+* Depois de ter feito a passo 1 vá no seu terminal.
 
-    EXEMPLO;
+* No local aonde você pretende instalar rode o comando `git clone` e logo após o endereço `SSH` que você copiou.
+
+     EXEMPLO;
+
     `git clone git@github.com:PedroPDIN/project-Trybe-Wallet.git`
 
 ### 3. Nova branch:   
@@ -88,12 +90,27 @@ EXEMPLO:
 
 ## Ilustrações de funcionamento
 
+### OBS: Projeto ainda não esta completo principalmente na parte de estilização e também possui alguns bugs nos `selects`. 
+
 ### Página de login
 
 ![ilustração da tela de login](/picture-illustration/trybe-wallet-tela-de-login.gif)
 
-> Na tela de login, possui validação em suas caixas de inputs;
+> Na tela de login, possui validação em suas caixas de inputs:
 > * Email: deve possuir as estruturas corretas de um endereço de email.
 > * Senha: deve ter no mínimo 6 carecteres.
 
 ### Página wallet(carteira)
+
+![](/picture-illustration/trybe-wallet-tela-wallt(carteira).gif)
+
+> Na tela wallet (carteira), possui os seguintes elementos:
+> * Despesa Total: com mostra o valor total da convenções das moedas selecionadas.
+> * Valor: Input que sera utilizado para o usuário acrescentar o valor para a convenção.
+> * Descrição: caso o usuário queira adiciona alguma informação a mais.
+> * Moeda: para selecionar uma moeda especifica(valores buscados na API).
+> * Pagamentos: qual é o tipo de pagamento o usuário preverir.
+> * Tags: Adiciona uma _tag_ especifica.
+> * Botão Adicionar: adiciona a tabela as informações preenchidas no formulário.
+> * Tabela: Ira possuir todas as informações que foram preenchidos no formulário acima.
+> * Botão Excluir: Tem funcionalidade de excluir a informação criada pelo o usuário.
