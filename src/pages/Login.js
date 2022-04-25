@@ -41,9 +41,16 @@ class Login extends React.Component {
   render() {
     const { isDisabled, email, senha } = this.state;
     const { getDispatch } = this.props;
+    const urlWallet = "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/100/000000/external-wallet-man-accessories-kiranshastry-lineal-color-kiranshastry.png";
+
     return (
-      <div>
-        <form action="">
+      <div style={{ height: "100vh", background: "#010114" }} 
+      class="flex flex-col items-center justify-center">
+        // 141450
+        <form action="" 
+        style={{ background: "#072b63", width: "40%" }}
+        class='bg-white p-10 rounded-3xl flex flex-col items-center'>
+        <img src={ urlWallet } alt="Ícone Wallet" className="mb-5 w-28"/>
           <Inputs
             email={ email }
             senha={ senha }
@@ -55,6 +62,7 @@ class Login extends React.Component {
             email={ email }
           />
         </form>
+
       </div>
     );
   }

@@ -5,9 +5,7 @@ class Inputs extends Component {
   render() {
     const { email, senha, onInputChange } = this.props;
     return (
-      <div>
-        <label htmlFor="email">
-          Email:
+      <div className='flex flex-col items-center'>
           <input
             type="email"
             name="email"
@@ -16,10 +14,7 @@ class Inputs extends Component {
             value={ email }
             onChange={ onInputChange }
           />
-        </label>
 
-        <label htmlFor="senha">
-          Senha:
           <input
             type="text"
             name="senha"
@@ -28,7 +23,6 @@ class Inputs extends Component {
             value={ senha }
             onChange={ onInputChange }
           />
-        </label>
       </div>
     );
   }
