@@ -18,7 +18,7 @@ class Header extends React.Component {
     const urlWallet = "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/100/000000/external-wallet-man-accessories-kiranshastry-lineal-color-kiranshastry.png";
 
     return (
-      <div className='flex justify-around items-center border-b-4 border-cyan-500 mb-10'>
+      <div className='flex justify-around items-center border-y-4 border-cyan-500 mb-10'>
         <img src={ urlWallet } alt="Ícone Wallet" className="flex justify-start my-6 w-38"/>
 
       <header className="flex flex-col justify-center items-center my-6 font-mono text-">
