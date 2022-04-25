@@ -13,7 +13,7 @@ class Inputs extends Component {
             placeholder="email@email.com"
             value={ email }
             onChange={ onInputChange }
-            className="rounded-t-2xl"
+            className="rounded-t-2xl w-80"
           />
 
           <input
@@ -23,7 +23,7 @@ class Inputs extends Component {
             placeholder="***********"
             value={ senha }
             onChange={ onInputChange }
-            className="rounded-b-2xl"
+            className="rounded-b-2xl w-80"
           />
       </div>
     );
