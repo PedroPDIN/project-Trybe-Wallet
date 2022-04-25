@@ -51,7 +51,7 @@ class Form extends Component {
           currency={ currency }
           method={ method }
           tag={ tag }
-          onChange={ this.onInputChange }
+          onChange={ this.onInputChange } 
         />
         <ButtonForm
           states={ this.state }

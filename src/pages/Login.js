@@ -49,7 +49,7 @@ class Login extends React.Component {
         // 141450
         <form action="" 
         style={{ background: "#072b63", width: "40%" }}
-        class='bg-white p-10 rounded-3xl flex flex-col items-center'>
+        class='bg-white p-10 rounded-3xl shadow-inner flex flex-col items-center'>
         <img src={ urlWallet } alt="Ícone Wallet" className="mb-5 w-28"/>
           <Inputs
             email={ email }
