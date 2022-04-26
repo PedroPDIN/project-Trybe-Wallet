@@ -15,7 +15,7 @@ class SelectForm extends Component {
             value={ currency }
             onChange={ onChange }
             data-testid="currency-input"
-            className='text-black rounded-2xl'
+            className='text-black rounded-full'
           >
             {coins.map((value, index) => (
               <option
@@ -36,7 +36,7 @@ class SelectForm extends Component {
             value={ method }
             onChange={ onChange }
             data-testid="method-input"
-            className='text-black rounded-2xl'
+            className='text-black rounded-full'
           >
             <option value="Dinheiro">Dinheiro</option>
             <option value="Cartão de crédito">Cartão de crédito</option>
@@ -51,7 +51,7 @@ class SelectForm extends Component {
             value={ tag }
             onChange={ onChange }
             data-testid="tag-input"
-            className='text-black rounded-2xl'
+            className='text-black rounded-full'
           >
             <option value="Alimentação">Alimentação</option>
             <option value="Lazer">Lazer</option>

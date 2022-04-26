@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Chart } from 'react-google-charts';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getExpenses } from '../../../actions';
@@ -19,6 +20,7 @@ class Form extends Component {
       currency: '',
       method: '',
       tag: '',
+
     };
   }
 
@@ -41,7 +43,7 @@ class Form extends Component {
     const { value, description, currency, method, tag } = this.state;
     const { dispatchInfo } = this.props;
     return (
-      <form>
+      <form className='mr-40'>
         <InputsForm
           value={ value }
           description={ description }
