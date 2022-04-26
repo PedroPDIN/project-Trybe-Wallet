@@ -46,7 +46,6 @@ class Login extends React.Component {
     return (
       <div style={{ height: "100vh", background: "#010114" }} 
       class="flex flex-col items-center justify-center">
-        // 141450
         <form action="" 
         style={{ background: "#072b63", width: "40%" }}
         class='bg-white p-10 rounded-3xl shadow-inner flex flex-col items-center'>

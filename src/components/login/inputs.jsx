@@ -17,7 +17,7 @@ class Inputs extends Component {
           />
 
           <input
-            type="text"
+            type="password"
             name="senha"
             data-testid="password-input"
             placeholder="***********"
