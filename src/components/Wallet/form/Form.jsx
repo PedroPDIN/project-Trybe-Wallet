@@ -16,9 +16,9 @@ class Form extends Component {
     this.state = {
       value: "",
       description: "",
-      currency: "",
-      method: "",
-      tag: "",
+      currency: "USD",
+      method: "Dinheiro",
+      tag: "Alimentação",
     };
   }
 
@@ -31,9 +31,9 @@ class Form extends Component {
     this.setState({
       value: "",
       description: "",
-      currency: "",
-      method: "",
-      tag: "",
+      currency: "USD",
+      method: "Dinheiro",
+      tag: "Alimentação",
     });
   }
 
