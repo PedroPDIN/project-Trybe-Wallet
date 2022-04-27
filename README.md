@@ -90,11 +90,9 @@ EXEMPLO:
 
 ## Ilustrações de funcionamento
 
-### OBS: Projeto ainda não esta completo principalmente na parte de estilização e também possui alguns bugs nos `selects`. 
-
 ### Página de login
 
-![ilustração da tela de login](/picture-illustration/trybe-wallet-tela-de-login.gif)
+![ilustração da tela de login](./src/gif/tela-de-login.gif)
 
 > Na tela de login, possui validação em suas caixas de inputs:
 > * Email: deve possuir as estruturas corretas de um endereço de email.
@@ -102,7 +100,7 @@ EXEMPLO:
 
 ### Página wallet(carteira)
 
-![](/picture-illustration/trybe-wallet-tela-wallt(carteira).gif)
+![ilustração do wallet](./src/gif/aplica%C3%A7%C3%A3o-wallet.gif)
 
 > Na tela wallet (carteira), possui os seguintes elementos:
 > * Despesa Total: com mostra o valor total da convenções das moedas selecionadas.

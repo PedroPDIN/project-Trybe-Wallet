@@ -32,10 +32,12 @@ class ButtonForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className='flex justify-center mt-7 mb-10'>
         <button
           type="button"
           onClick={ this.onClick }
+          style={{ background: "#0ab08d" }}
+          className="bg-white text-black p-2 rounded-3xl w-60"
         >
           Adicionar despesa
         </button>

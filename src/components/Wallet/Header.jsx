@@ -15,16 +15,23 @@ class Header extends React.Component {
   render() {
     const { exchangeRate } = this.state;
     const { userEmail, infoForm } = this.props;
+    const urlWallet = "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/100/000000/external-wallet-man-accessories-kiranshastry-lineal-color-kiranshastry.png";
+
     return (
-      <header>
-        <span data-testid="email-field">{`Email: ${userEmail}`}</span>
+      <div className='flex justify-around items-center border-y-4 border-cyan-500 mb-10'>
+        <img src={ urlWallet } alt="Ícone Wallet" className="flex justify-start my-6 w-38"/>
+
+      <header className="flex flex-col justify-center items-center my-6 font-mono text-">
+        <span data-testid="email-field"   className='mb-2 font-mono text-xl'>{`Email: ${userEmail}`}</span>
         {' '}
-        <span data-testid="total-field">
+        <span data-testid="total-field" style={{ color: "#0ab08d" }} className='text-xl'>
           {`Despesa Total: R$${Number(addTotal(infoForm)).toFixed(2)}`}
         </span>
         {' '}
-        <span data-testid="header-currency-field">{exchangeRate}</span>
+        <span data-testid="header-currency-field" style={{ color: "#0ab08d" }}>{exchangeRate}</span>
       </header>
+
+      </div>
     );
   }
 }

@@ -6,8 +6,8 @@ class SelectForm extends Component {
   render() {
     const { currency, method, tag, onChange, coins } = this.props;
     return (
-      <div>
-        <label htmlFor="currency's">
+      <div className="flex flex-col items-end my-2 font-mono">
+        <label htmlFor="currency's" className='text-xl'>
           Moeda:
           <select
             id="currency's"
@@ -15,6 +15,7 @@ class SelectForm extends Component {
             value={ currency }
             onChange={ onChange }
             data-testid="currency-input"
+            className='text-black rounded-full'
           >
             {coins.map((value, index) => (
               <option
@@ -27,7 +28,7 @@ class SelectForm extends Component {
             ))}
           </select>
         </label>
-        <label htmlFor="methods">
+        <label htmlFor="methods" className='text-xl my-2'>
           Pagamentos:
           <select
             id="methods"
@@ -35,13 +36,14 @@ class SelectForm extends Component {
             value={ method }
             onChange={ onChange }
             data-testid="method-input"
+            className='text-black rounded-full'
           >
             <option value="Dinheiro">Dinheiro</option>
             <option value="Cartão de crédito">Cartão de crédito</option>
             <option value="Cartão de débito">Cartão de débito</option>
           </select>
         </label>
-        <label htmlFor="tags">
+        <label htmlFor="tags" className='text-xl'>
           Tags:
           <select
             id="tags"
@@ -49,6 +51,7 @@ class SelectForm extends Component {
             value={ tag }
             onChange={ onChange }
             data-testid="tag-input"
+            className='text-black rounded-full'
           >
             <option value="Alimentação">Alimentação</option>
             <option value="Lazer">Lazer</option>

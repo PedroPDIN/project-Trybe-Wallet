@@ -5,27 +5,28 @@ class InputsForm extends Component {
   render() {
     const { value, description, onInputChange } = this.props;
     return (
-      <div>
-        <label htmlFor="value">
-          Valor:
+      <div className='flex flex-col items-start font-mono'>
           <input
             type="number"
             name="value"
             value={ value }
             data-testid="value-input"
             onChange={ onInputChange }
+            placeholder="Valor"
+            style={{ background: "white" }}
+            className='text-black ml-4 rounded-t-2xl shadow-inner'
           />
-        </label>
-        <label htmlFor="value">
-          Descrição:
+
           <input
             type="text"
             name="description"
             value={ description }
             data-testid="description-input"
             onChange={ onInputChange }
+            placeholder="Descrição"
+            style={{ background: "white" }}
+            className='text-black ml-4 rounded-b-2xl'
           />
-        </label>
       </div>
     );
   }
