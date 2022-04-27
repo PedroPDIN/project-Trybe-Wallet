@@ -32,7 +32,7 @@ class ButtonForm extends Component {
 
   render() {
     return (
-      <div className='flex flex-col items-end mt-7'>
+      <div className='flex justify-center mt-7 mb-10'>
         <button
           type="button"
           onClick={ this.onClick }

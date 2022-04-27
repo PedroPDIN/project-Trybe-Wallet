@@ -28,7 +28,7 @@ class SelectForm extends Component {
             ))}
           </select>
         </label>
-        <label htmlFor="methods" className='text-xl'>
+        <label htmlFor="methods" className='text-xl my-2'>
           Pagamentos:
           <select
             id="methods"

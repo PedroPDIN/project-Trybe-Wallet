@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { Chart } from 'react-google-charts';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { getExpenses } from '../../../actions';
-import InputsForm from './components/InputsForm';
-import SelectsForm from './components/SelectsForm';
-import ButtonForm from './components/ButtonForm';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getExpenses } from "../../../actions";
+import InputsForm from "./components/InputsForm";
+import SelectsForm from "./components/SelectsForm";
+import ButtonForm from "./components/ButtonForm";
 
 class Form extends Component {
   constructor() {
@@ -15,12 +14,11 @@ class Form extends Component {
     this.onResetChange = this.onResetChange.bind(this);
 
     this.state = {
-      value: '',
-      description: '',
-      currency: '',
-      method: '',
-      tag: '',
-
+      value: "",
+      description: "",
+      currency: "",
+      method: "",
+      tag: "",
     };
   }
 
@@ -31,11 +29,11 @@ class Form extends Component {
 
   onResetChange() {
     this.setState({
-      value: '',
-      description: '',
-      currency: '',
-      method: '',
-      tag: '',
+      value: "",
+      description: "",
+      currency: "",
+      method: "",
+      tag: "",
     });
   }
 
@@ -43,22 +41,25 @@ class Form extends Component {
     const { value, description, currency, method, tag } = this.state;
     const { dispatchInfo } = this.props;
     return (
-      <form className='mr-40'>
-        <InputsForm
-          value={ value }
-          description={ description }
-          onInputChange={ this.onInputChange }
-        />
-        <SelectsForm
-          currency={ currency }
-          method={ method }
-          tag={ tag }
-          onChange={ this.onInputChange } 
-        />
+      <form>
+        <div className="flex items-center justify-evenly mx-10">
+          <InputsForm
+            value={value}
+            description={description}
+            onInputChange={this.onInputChange}
+          />
+          <SelectsForm
+            currency={currency}
+            method={method}
+            tag={tag}
+            onChange={this.onInputChange}
+          />
+        </div>
+
         <ButtonForm
-          states={ this.state }
-          dispatch={ dispatchInfo }
-          reset={ this.onResetChange }
+          states={this.state}
+          dispatch={dispatchInfo}
+          reset={this.onResetChange}
         />
       </form>
     );
