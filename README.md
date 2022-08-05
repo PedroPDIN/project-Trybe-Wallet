@@ -1,6 +1,6 @@
 # Seja bem-vindo ao repositorio do projeto **Trybe Wallet**, a sua carteira digital.
 
-O resultado dessa aplicação tem como finalidade, a criação de uma carteira digital para comprar e computar os gastos das cotações das moedas de vários países. Nesse aplicação o usuário poderá selecionar um ou mais moedas especifica e armazena-la da carteira em forma de despesa, além de;
+O resultado dessa aplicação tem como finalidade, a criação de uma carteira digital para comprar e computar as cotações das moedas de vários países. Nesse aplicação o usuário poderá selecionar um ou mais moedas especifica e armazena-la da carteira em forma de despesa, além de;
 
 * comprar moedas.
 * converter tudo para uma única moeda.
