@@ -4,5 +4,3 @@ const addTotal = (expenses) => expenses.reduce(
 );
 
 export default addTotal;
-
-// criação deste método graças ao mateus turola da turma 16 for(ever);
